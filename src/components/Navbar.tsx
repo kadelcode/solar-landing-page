@@ -19,7 +19,7 @@ const Navbar = () => {
     return (
         <nav className="bg-[#fff] shadow-md py-4">
             <div className="container mx-auto flex justify-between items-center px-6">
-                <h1 className={` ${openSans.className} text-2xl font-bold text-yellow-500`}>SunSpark</h1>
+                <h1 className={`${openSans.variable} text-2xl font-bold text-yellow-500`}>SunSpark</h1>
                 <div className="hidden md:flex space-x-6 text-[#101828]">
                     <Link href="/">Home</Link>
                     <Link href="#services">Services</Link>
