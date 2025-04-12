@@ -15,7 +15,7 @@ const Hero = () => {
                       className="rounded-lg"
                     />
                 </div>
-                <button className="px-6 py-3 bg-[oklch(79.5% 0.184 86.047)] text-[#fff] rounded-lg mt-6">Get a Free Quote</button>
+                <button className="px-6 py-3 bg-amber-600 text-[#fff] rounded-lg mt-6">Get a Free Quote</button>
             </div>
         </section>
     );
