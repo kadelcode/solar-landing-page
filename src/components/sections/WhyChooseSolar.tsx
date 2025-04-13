@@ -55,6 +55,7 @@ export default function WhyChooseSolar() {
                           className="bg-gray-100 rounded-xl p-6 shadow hover:shadow-lg transition"
                           initial={{ opacity: 0, y: 30 }}
                           whileInView={{ opacity: 1, y: 0 }}
+                          transition={{ delay: i * 0.2 }}
                         
                         >
                             <div className="flex items-center justify-center mb-4">
