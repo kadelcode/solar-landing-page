@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import { motion, AnimatePresence, MotionConfigContext } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Sun } from 'lucide-react';
 
 export default function SplashScreen() {
