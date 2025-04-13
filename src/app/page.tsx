@@ -4,6 +4,7 @@ import WhyChooseSolar from "@/components/sections/WhyChooseSolar";
 import Services from "@/components/sections/Services";
 import HowItWorks from "@/components/sections/HowItWorks";
 import Testimonials from "@/components/sections/Testimonials";
+import SolarSavings from "@/components/SolarSavings";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Services />
       <HowItWorks />
       <Testimonials />
+      <SolarSavings />
     </div>
   );
 }
