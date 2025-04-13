@@ -8,8 +8,10 @@ import { openSans } from "@/lib/fonts";
 
 
 const Navbar = () => {
+    // State to manage the open/close state of the mobile menu
     const [isOpen, setIsOpen] = useState(false);
 
+    // Function to toggle the mobile menu state
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
@@ -17,51 +19,65 @@ const Navbar = () => {
     return (
         <nav className="bg-[#fff] shadow-md py-4">
             <div className="container mx-auto flex justify-between items-center px-3">
+                {/* Logo or Brand Name */}
                 <h1 className={`${openSans.className} text-2xl font-bold text-yellow-500`}>
                    <FaBoltLightning size={30} className="text-yellow-400 inline"/>
                     SunSpark
                 </h1>
+
+                {/* Desktop Navigation Links */}
                 <div className="hidden md:flex space-x-6 text-[#101828]">
                     <Link href="/">Home</Link>
                     <Link href="#services">Services</Link>
                     <Link href="#contact">Contact</Link>
                 </div>
 
+                {/* Mobile Menu Button */}
                 <div className="md:hidden text-[#101828]">
                     <button onClick={toggleMenu} className="text-[#101828] focus:outline-none">
+                        {/* AltRight Hamburger Icon */}
                         <BiMenuAltRight size={30} />
                     </button>
                 </div>
             </div>
 
+            {/* Overlay for Mobile Menu */}
             {isOpen && (
-                    <div className="md:hidden fixed inset-0 bg-[#000]/50 opacity-50 z-10" onClick={toggleMenu}></div>
+                <div className="md:hidden fixed inset-0 bg-black/50 opacity-50 z-10" 
+                  onClick={toggleMenu}
+                ></div>
             )}
-                    <div 
-                      className={`md:hidden fixed inset-y-0 right-0 w-64 z-20 border-2 bg-[#fff] shadow-lg
-                        transform transition-transform duration-300
-                        ${isOpen ? "translate-x-0" : "translate-x-full"}
-                        `}
+
+            {/* Mobile Menu */}
+            <div 
+                className={`md:hidden fixed inset-y-0 right-0 w-64 z-20 border-2 bg-[#fff] shadow-lg
+                transform transition-transform duration-300
+                ${isOpen ? "translate-x-0" : "translate-x-full"}
+                `}
+            >
+                <div className="flex justify-between px-3 py-4">
+                    {/* Logo */}
+                    <FaBoltLightning size={30} className="text-yellow-400 inline"/>
+                    {/*<h1 className={` ${openSans.className} text-2xl font-bold text-yellow-500`}>SunSpark</h1>*/}
+                    
+                    {/* Cancel Button for Mobile Menu */}
+                    <button
+                      onClick={toggleMenu}
+                      className="text-[#000] mb-4 flex items-center justify-end cursor-pointer"
                     >
-                        <div className="flex justify-between px-2 py-4">
-                            <h1 className={` ${openSans.className} text-2xl font-bold text-yellow-500`}>SunSpark</h1>
-                            <button
-                            onClick={toggleMenu}
-                            className="text-[#000] mb-4 flex items-center justify-end cursor-pointer"
-                            >
-                                <BiX size={30} />
-                            </button>
-                        </div>
-                        <Link href="/" className="block px-6 py-2 text-[#101828] cursor-pointer">
-                            Home
-                        </Link>
-                        <Link href="/" className="block px-6 py-2 text-[#101828] cursor-pointer">
-                            Services
-                        </Link>
-                        <Link href="/" className="block px-6 py-2 text-[#101828] cursor-pointer">
-                            Contact
-                        </Link>
-                    </div>
+                        <BiX size={30} />
+                    </button>
+                </div>
+                <Link href="/" className="block mx-6 my-2 text-[#101828] cursor-pointer w-auto">
+                    Home
+                </Link>
+                <Link href="/" className="block mx-6 my-2 text-[#101828] cursor-pointer">
+                    Services
+                </Link>
+                <Link href="/" className="block mx-6 my-2 text-[#101828] cursor-pointer">
+                    Contact
+                </Link>
+            </div>
         </nav>
     );
 };
