@@ -41,6 +41,7 @@ const Testimonials = () => {
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: index * 0.2 }}
+                            whileHover={{ scale: 1.05 }}
 
                         >
                             <FaQuoteLeft className="text-primary text-2xl mb-3" />
