@@ -30,7 +30,7 @@ const SolarSavings = () => {
                     type="number"
                     value={bill}
                     onChange={(e) => setBill(Number(e.target.value))}
-                    className="w-full p-2 border border-yellow-500 rounded mb-4"
+                    className="w-full p-2 border border-yellow-500 rounded mb-4 focus:border-sky-500 focus:outline-none"
                     placeholder="Monthly Electricity Bill ($)"
                     />
 
