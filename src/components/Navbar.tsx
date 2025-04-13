@@ -27,8 +27,9 @@ const Navbar = () => {
 
                 {/* Desktop Navigation Links */}
                 <div className="hidden md:flex space-x-6 text-[#101828]">
-                    <Link href="/">Home</Link>
+                    <Link href="#whysolar">Why Solar?</Link>
                     <Link href="#services">Services</Link>
+                    <Link href="#testimonials">Testimonials</Link>
                     <Link href="#contact">Contact</Link>
                 </div>
 
@@ -68,13 +69,16 @@ const Navbar = () => {
                         <BiX size={30} />
                     </button>
                 </div>
-                <Link href="/" className="block mx-6 my-2 text-[#101828] cursor-pointer w-auto">
-                    Home
+                <Link href="#whysolar" onClick={() => setIsOpen(false)} className="block mx-6 my-2 text-[#101828] cursor-pointer w-auto">
+                    Why Solar?
                 </Link>
-                <Link href="/" className="block mx-6 my-2 text-[#101828] cursor-pointer">
+                <Link href="#services" onClick={() => setIsOpen(false)} className="block mx-6 my-2 text-[#101828] cursor-pointer">
                     Services
                 </Link>
-                <Link href="/" className="block mx-6 my-2 text-[#101828] cursor-pointer">
+                <Link href="#testimonials" onClick={() => setIsOpen(false)} className="block mx-6 my-2 text-[#101828] cursor-pointer">
+                    Testimonials
+                </Link>
+                <Link href="#contact" onClick={() => setIsOpen(false)} className="block mx-6 my-2 text-[#101828] cursor-pointer">
                     Contact
                 </Link>
             </div>
