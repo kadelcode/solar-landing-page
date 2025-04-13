@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { FaSolarPanel, FaBuilding, FaBatteryFull } from 'react-icons/fa6';
+import { motion } from 'framer-motion';
 
 const services = [
     { 
@@ -24,16 +25,41 @@ const services = [
 
 const Services = () => {
     return (
-        <section id="services" className="py-16 bg-gray-100">
+        <section id="services" className="py-20 px-4 bg-gray-100">
             <div className="container mx-auto text-center">
-                <h2 className="text-3xl font-bold text-gray-900">Our Services</h2>
-                <div className="mt-6 flex px-3 flex-wrap justify-center mx-auto sm:space-x-4 md:space-x-8 space-y-4">
+                <motion.h2 
+                  className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6"
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: .6 }}
+                >
+                    Our Services
+                </motion.h2>
+
+                <motion.p
+                  className="text-lg text-gray-600 mb-12"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                >
+                    Our power solutions.
+                </motion.p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((service, index) => (
-                        <div key={index} className="bg-white p-6 rounded-lg shadow-md text-left w-72 h-48">
-                            {service.icon}
+                        <motion.div 
+                          key={index} 
+                          className="bg-white p-6 rounded-lg shadow-md"
+                          initial={{ opacity: 0, y: 30 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                        >
+                            <div className="flex items-center justify-center mb-4">
+                                {service.icon}
+                            </div>
+                            
                             <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
                             <p className="text-gray-800">{service.desc}</p>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
