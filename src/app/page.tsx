@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/sections/Hero";
+import WhyChooseSolar from "@/components/sections/WhyChooseSolar";
 import Services from "@/components/sections/Services";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <div>
       <Navbar />
       <Hero />
+      <WhyChooseSolar />
       <Services />
     </div>
   );
