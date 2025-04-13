@@ -32,7 +32,7 @@ export default function WhyChooseSolar() {
         <section className="py-20 px-4 bg-white">
             <div className="max-w-6xl mx-auto text-center">
                 <motion.h2
-                  className="text-4xl text-gray-900 font-bold mb-6"
+                  className="text-3xl sm:text-4xl text-gray-900 font-bold mb-6"
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
