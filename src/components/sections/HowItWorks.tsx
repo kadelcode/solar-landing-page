@@ -52,7 +52,7 @@ export default function HowItWorks() {
                     {steps.map((step, index) => (
                         <motion.div
                           key={index}
-                          className="bg-white rounded-xl p-6 shadow hover:shadow-md transition"
+                          className="bg-white rounded-xl p-6 shadow hover:shadow-md"
                           initial={{ opacity: 0, y: 30 }}
                           whileInView={{ opacity: 1, y: 0 }}
                           transition={{ delay: index * 0.2 }}
