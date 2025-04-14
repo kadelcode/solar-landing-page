@@ -52,7 +52,7 @@ export default function WhyChooseSolar() {
                     {benefits.map((item, i) => (
                         <motion.div
                           key={i}
-                          className="bg-gray-100 rounded-xl p-6 shadow hover:shadow-lg transition"
+                          className="bg-gray-100 rounded-xl p-6 shadow hover:shadow-lg"
                           initial={{ opacity: 0, y: 30 }}
                           whileInView={{ opacity: 1, y: 0 }}
                           transition={{ delay: i * 0.2 }}
