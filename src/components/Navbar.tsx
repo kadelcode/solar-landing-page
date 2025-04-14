@@ -17,7 +17,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-[#fff] fixed w-full shadow-md py-4">
+        <nav className="bg-[#fff] fixed w-full shadow-md py-4 z-40">
             <div className="container mx-auto flex justify-between items-center px-3">
                 {/* Logo or Brand Name */}
                 <h1 className={`${openSans.className} text-2xl font-bold text-yellow-500`}>
