@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
     return (
-        <section className="flex flex-col items-center bg-[#FFF] px-5 py-20 justify-center text-[#000]">
+        <section className="flex flex-col items-center bg-[#FFF] px-5 py-30 sm:py-40 justify-center text-[#000]">
             <div className="text-center space-y-6">
                 <motion.h1 
                   className="text-4xl sm:text-5xl font-extrabold"

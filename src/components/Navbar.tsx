@@ -20,10 +20,10 @@ const Navbar = () => {
         <nav className="bg-[#fff] fixed w-full shadow-md py-4 z-40">
             <div className="container mx-auto flex justify-between items-center px-3">
                 {/* Logo or Brand Name */}
-                <h1 className={`${openSans.className} text-2xl font-bold text-yellow-500`}>
+                <Link href="/" className={`${openSans.className} text-2xl font-bold text-yellow-500`}>
                    <FaBoltLightning size={30} className="text-yellow-400 inline"/>
                     SunSpark
-                </h1>
+                </Link>
 
                 {/* Desktop Navigation Links */}
                 <div className="hidden md:flex space-x-6 text-[#101828]">
@@ -35,7 +35,7 @@ const Navbar = () => {
 
                 {/* Mobile Menu Button */}
                 <div className="md:hidden text-[#101828]">
-                    <button onClick={toggleMenu} className="text-[#101828] focus:outline-none">
+                    <button onClick={toggleMenu} className="text-[#101828] focus:outline-none cursor-pointer">
                         {/* AltRight Hamburger Icon */}
                         <BiMenuAltRight size={30} />
                     </button>
