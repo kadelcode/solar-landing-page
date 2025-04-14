@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ClipboardList, PhoneCall, Wrench, ShieldCheck } from "lucide-react";
+import Link from "next/link";
 
 const steps = [
     {
@@ -64,6 +65,20 @@ export default function HowItWorks() {
                         </motion.div>
                     ))}
                 </div>
+
+                {/* CTA Button */}
+                <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: 0.4 }}
+                    >
+                        <Link
+                          href="/contact"
+                          className="inline-block mt-12 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-xl shadow transition"
+                        >
+                            Book a Free Consultation
+                        </Link>
+                </motion.div>
             </div>
         </section>
     )
