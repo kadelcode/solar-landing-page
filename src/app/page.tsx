@@ -7,6 +7,7 @@ import HowItWorks from "@/components/sections/HowItWorks";
 import Testimonials from "@/components/sections/Testimonials";
 import Gallery from "@/components/sections/Gallery";
 import SolarSavings from "@/components/SolarSavings";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <HowItWorks />
       <Testimonials />
       <Gallery />
+      <ContactForm />
       <SolarSavings />
     </div>
   );
