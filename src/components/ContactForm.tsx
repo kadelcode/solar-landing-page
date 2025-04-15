@@ -18,21 +18,32 @@ const ContactForm = () => {
         setIsSending(true);
         setStatus("Sending...");
 
-        const response = await fetch("/api/contact", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(formData),
-        });
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            });
 
-        if (response.ok) {
-            setStatus("Message sent successfully!");
-            setFormData({ name: "", email: "", message: "" });
-            setIsSending(false);
-        } else {
-            setStatus("Failed to send message.");
+            if (response.ok) {
+                setStatus("Message sent successfully!");
+                setFormData({ name: "", email: "", message: "" });                
+            } else {
+                const errorData = await response.json();
+                if (response.status === 400) {
+                    setStatus("Invalid input. Please check your details and try again.");
+                } else if (response.status === 500) {
+                    setStatus("Server error. Please try again later.");
+                } else {
+                    setStatus(`Failed to send message: ${errorData.message || "Unknow error"}`);
+                }
+            }
+        } catch (error) {
+            setStatus("Network error. Please check your connection and try again.");
+        } finally {
             setIsSending(false);
         }
-    };
+    }
     
     return (
         <section id="contact" className="py-16 bg-gray-100">
@@ -89,7 +100,7 @@ const ContactForm = () => {
                 </form>
                 {status && <p className={`
                     text-center mt-4
-                    ${status.includes("success") ? "text-green-500" : "text-red-500"}
+                    ${isSending ? "text-gray-500" : status.includes("success") ? "text-green-500" : "text-red-500"}
                     text-green-500
                     `
                     }
