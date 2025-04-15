@@ -8,6 +8,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import Gallery from "@/components/sections/Gallery";
 import SolarSavings from "@/components/SolarSavings";
 import ContactForm from "@/components/ContactForm";
+import Footer from "@/components/sections/Footer";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <Gallery />
       <ContactForm />
       <SolarSavings />
+      <Footer />
     </div>
   );
 }
