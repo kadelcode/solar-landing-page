@@ -5,7 +5,9 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
 // Creating a new instance of the Resend client using your API key from environment variables
-const resend = new Resend(process.env.RESEND_API_KEY)
+// const resend = new Resend(process.env.RESEND_API_KEY)
+
+const resend = new Resend("woejiwjweoijA43");
 
 // Defining the POST handler function for the API route
 export async function POST(req: Request) {
