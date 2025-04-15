@@ -39,6 +39,7 @@ const ContactForm = () => {
                 }
             }
         } catch (error) {
+            console.error("Error sending email:", error); // Log the actual error
             setStatus("Network error. Please check your connection and try again.");
         } finally {
             setIsSending(false);
