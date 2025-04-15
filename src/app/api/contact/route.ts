@@ -31,6 +31,9 @@ export async function POST(req: Request) {
         // If the email is sent successfully, return a JSON response indicating success
         return NextResponse.json({ success: true, message: "Email sent successfully!" });
     } catch (error) {
+
+        console.error("Error sending email:", error); // Log the actual error
+
         // If there's an error (e.g, network issue, bad API key, etc), return an error response
         return NextResponse.json({ success: false, message: "Error sending email."}, { status: 500 });
     }
