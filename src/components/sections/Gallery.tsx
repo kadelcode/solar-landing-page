@@ -23,14 +23,14 @@ export default function Gallery() {
         <section className="py-20 bg-white px-4">
             <div className="max-w-6xl mx-auto text-center">
                 <motion.h2
-                  className="text-4xl font-bold mb-4 text-gray-900"
+                  className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900"
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
                 >
                     Our Solar Projects
                 </motion.h2>
-                <p className='text-gray-600 mb-10'>See our latest intallations across the country.</p>
+                <p className='text-gray-800 mb-10'>See our latest intallations across the country.</p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     {images.map((src, i) => (
