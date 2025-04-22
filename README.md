@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ☀️ SunSpark - Modern Solar Company Landing Page
 
-## Getting Started
+A sleek and responsive landing page for a solar energy company, built with **Next.js 13+, TailwindCSS**, and modern tools like **Framer Motion**, **PostgreSQL**, and **Google Maps**. Designed to convert visitors into leads with clean UI, smooth animations, and an informative structure.
+![Landing Page](./public/sunspark_landing_page.png)
 
-First, run the development server:
+---
+
+## 🌟 Features
+
+- ⚡ Animated Splash Screen (Framer Motion)
+- 🖼️ Image Gallery with Lightbox
+- 📞 Contact Form connected to PostgreSQL
+- 🗺️ Embedded Google Maps Location
+- 📱 Fully Responsive Design
+- 🔥 Scroll Animations (Framer Motion)
+- 📌 Step-by-Step "How It Works" Section
+- ✅ Benefits Section (Why Solar?)
+- 📈 Testimonials and FAQs
+- 🌐 SEO & Accessibility Optimized
+- 🦶 Clean Footer with Socials + Contact Info
+
+---
+
+## 🧱 Tech Stack
+
+| Tech          | Description                             |
+|---------------|-----------------------------------------|
+| Next.js 13+   | App Router, SSR, Image Optimization     |
+| TailwindCSS   | Utility-first CSS for styling           |
+| Framer Motion | Animations & transitions                |
+| PostgreSQL    | Stores form submissions                 |
+| Prisma ORM    | Database interaction (Optional)         |
+| React Icons   | Scalable icons for UI                   |
+| Lightbox      | Image modal viewer                      |
+| Google Maps   | Embed office location                   |
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/kadelcode/solar-landing-page.git
+cd solar-landing-page
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 2. Install Dependencies
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+npm install
+```
 
-## Learn More
+### 3. Set Up Environment Variables
+```
+DATABASE_URL=postgresql://USER:PASSWORD@HOST:PORT/DATABASE
+NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_api_key_here
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 4. Run Development Server
+```
+npm run dev
+```
+Navigate to ```http://localhost:3000```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Project Structure
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🧪 Deployment
+Deploy this project using Vercel, Render, or any Next.js-compatible platform.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🤝 Contributing
+Contributions are welcome! Please open issues and submit PRs.
+
+---
+
+## 📄 License
+This project is licensed under the [MIT License](https://mit-license.org/).
